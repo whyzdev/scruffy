@@ -223,7 +223,11 @@ def main():
                     help='output file name')
     parser.add_option('--font-family', action='store', dest='font',
                     help='set output font family')
+    parser.add_option('--shadow', action='store_true', dest='shadow',
+                    help='enable shadow')
     (options, args) = parser.parse_args()
+
+    ##print >> sys.stderr, options
 
     if len(args) > 1:
         parser.error('Too many arguments')
